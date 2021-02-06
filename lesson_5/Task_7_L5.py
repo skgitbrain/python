@@ -17,4 +17,4 @@ with open("txttask_7.txt", "r", encoding="utf-8") as f:
     new_list.append(new_dic)
     new_list.append(average_dic)
 with open("my_file.json", "w", encoding="utf-8") as json_f:
-    json.dump(new_list, json_f, ensure_ascii=False)
+    json.dump(new_list, json_f, ensure_ascii=False, indent = 4)
