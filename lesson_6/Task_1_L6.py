@@ -2,29 +2,36 @@ from time import sleep
 
 
 class TrafficLight:
-    __color = 'красный'
+    __color = 'Красный'
 
-    def running(self, color_2, color_3):
-        error = "светфор сломался!"
+    def running(self):
         while True:
+            error = "светофор сломался!"
+            self.__color = "Красный"
             print(self.__color)
-            if self.__color != "красный":
+            if self.__color != "Красный":
                 print(error)
                 break
             sleep(3)
-            self.color_2 = print(color_2)
-            if color_2 != "желтый":
+            self.__color = "Жёлтый"
+            print(self.__color)
+            if self.__color != "Жёлтый":
                 print(error)
                 break
             sleep(2)
-            self.color_3 = print(color_3)
-            if color_3 != "зеленый":
+            self.__color = "Зелёный"
+            print(self.__color)
+            if self.__color != "Зелёный":
                 print(error)
                 break
             sleep(6)
-            self.color_2 = print(color_2)
+            self.__color = "Жёлтый"
+            print(self.__color)
+            if self.__color != "Жёлтый":
+                print(error)
+                break
             sleep(2)
 
 
 a = TrafficLight()
-a.running("желтый", "зеленый")
+a.running()
