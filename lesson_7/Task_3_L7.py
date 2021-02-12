@@ -4,20 +4,23 @@ class Cell:
         self.cell = cell
 
     def __add__(self, other):
-        return self.cell + other.cell
+        return Cell(self.cell + other.cell)
+
+    def __str__(self):
+        return f"{self.cell}"
 
     def __sub__(self, other):
         result = max(self.cell, other.cell) - min(self.cell, other.cell)
         if result > 0:
-            return result
+            return Cell(result)
         else:
             return f'Разность клеток меньше 1, введите другие'
 
     def __mul__(self, other):
-        return self.cell * other.cell
+        return Cell(self.cell * other.cell)
 
     def __truediv__(self, other):
-        return round(self.cell / other.cell)
+        return Cell(round(self.cell / other.cell))
 
     def make_order(self, rows):
         result = ''
