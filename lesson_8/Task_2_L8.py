@@ -1,6 +1,6 @@
 class MyError(Exception):
-    def __init__(self, text):
-        self.text = text
+    def __init__(self, txt):
+        self.txt = txt
 
 
 num_1 = int(input("На сколько частей будет делить апельсин?: "))
